@@ -20,7 +20,7 @@ dpkg -i emacs-snapshot_1.0_all.deb
 
 echo "Done."
 echo "Stage 3: Making symlinks ..."
-latest=$(cd /usr/local/share/emacs && echo 2[34].* | tr ' ' '\n' | sort \
+latest=$(cd /usr/local/share/emacs && echo 2[345].* | tr ' ' '\n' | sort \
     | tail -n 1)
 ln -sfn /usr/local/share/emacs/$latest /usr/share/emacs-snapshot
 ln -sf /usr/local/bin/emacs /usr/bin/emacs-snapshot
