@@ -68,14 +68,6 @@ supercedes a .el file of the same name."
 running.  Something like 'emacs20, 'xemacs20, etc.")
   (debian-startup debian-emacs-flavor))
 
-;; Deal with tree-widget.el in slime directory shadowing the built-in
-;; version.
-(setq load-path
-      (nconc (delete
-              "/usr/local/share/emacs/23.0.60/site-lisp/slime"
-              (delete "/usr/share/emacs-snapshot/site-lisp/slime" load-path))
-             (list "/usr/local/share/emacs/23.0.60/site-lisp/slime")))
-
 ;;; More Hacks
 
 (defcustom debian-changelog-distributions
@@ -100,7 +92,7 @@ running.  Something like 'emacs20, 'xemacs20, etc.")
 
 ;;; Customizations
 
-(add-to-list 'debian-changelog-distributions "hardy")
-(add-to-list 'debian-changelog-distributions "intrepid")
+(add-to-list 'debian-changelog-distributions "trusty")
+(add-to-list 'debian-changelog-distributions "xenial")
 
 ;;; debian-init.el ends here
