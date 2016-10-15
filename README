@@ -22,3 +22,16 @@ There are two parts to this kit:
    fixes some symlinks and installs emacs-snapshot_1.0_all.deb, a
    package which provides Emacs to satisfy the dependencies of other
    packages.
+
+Also, see https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=840793
+
+In emacsen-common 2.0.8 at least (possibly earlier), and until the bug is
+fixed, /usr/lib/emacsen-common/packages/install/emacsen-common must be
+patched to make installation work: lines 25-26, which read:
+
+(cd /usr/share/${FLAVOR}/site-lisp
+  ln -s ../../emacs/site-lisp/debian-startup.el .)
+
+   should be replaced with:
+
+ln -s /usr/share/emacs/site-lisp/debian-startup.el /usr/share/${FLAVOR}/site-lisp/
