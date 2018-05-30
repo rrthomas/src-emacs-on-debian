@@ -94,5 +94,6 @@ running.  Something like 'emacs20, 'xemacs20, etc.")
 
 (add-to-list 'debian-changelog-distributions "trusty")
 (add-to-list 'debian-changelog-distributions "xenial")
+(add-to-list 'debian-changelog-distributions "bionic")
 
 ;;; debian-init.el ends here
