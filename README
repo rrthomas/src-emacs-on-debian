@@ -6,6 +6,10 @@
                Maintainer: Reuben Thomas <rrt@sc3d.org>
            Author: Michael Olson <mwolson@members.fsf.org>
 
+N.B.: If you use this package, you should purge it before upgrading your
+distribution, because otherwise it is likely to break the upgrade process:
+the emacs binary may well depend on library versions that are removed by the
+upgrade, and hence the emacsen-common hooks will fail!
 
 This git repository contains some useful resources for integrating
 Emacs built from source into Debian or derivatives like Ubuntu.
