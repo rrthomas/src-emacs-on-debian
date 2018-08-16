@@ -28,8 +28,6 @@ mkdir -p /etc/emacs-snapshot/site-start.d
 
 echo "Done."
 echo "Stage 4: Installing emacs-snapshot flavor ..."
-echo >> /var/lib/emacsen-common/installed-flavors
-echo emacs-snapshot >> /var/lib/emacsen-common/installed-flavors
 /usr/lib/emacsen-common/emacs-install emacs-snapshot
 
 echo "Done."
