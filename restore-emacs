@@ -24,7 +24,8 @@ latest=$(cd /usr/local/share/emacs && echo 2[3456789].* | tr ' ' '\n' | sort \
     | tail -n 1)
 ln -sfn /usr/local/share/emacs/$latest /usr/share/emacs-snapshot
 ln -sf /usr/local/bin/emacs /usr/bin/emacs-snapshot
-mkdir -p /etc/emacs-snapshot/site-start.d
+mkdir -p /etc/emacs-snapshot/
+ln -sf /etc/emacs/site-start.d /etc/emacs-snapshot/
 
 echo "Done."
 echo "Stage 4: Installing emacs-snapshot flavor ..."
